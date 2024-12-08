@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+    background-color: #000000;
+}
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; /* Center items vertically */
+    background: rgba(0, 0, 0, 0); /* Transparent ddbackground for visibility */
+    padding: 10px 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+#carouselExampleSlidesOnly{
+    width: 100VW;
+    height: 100vh;
+    z-index: -1;
+}
+.gradient-top,.gradient-bottom{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 25%; 
+    z-index: 2;
+}
+.gradient-top{
+    top: 0;
+    background: linear-gradient(to bottom,  rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+.gradient-bottom{
+    bottom: 0;
+    background: linear-gradient(to top,  rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+}
+a{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+a:hover{
+    font-size: 30px;
+}
+h1{
+    text-align: center;
+    font-size: 90px;
+    opacity: 0;
+    transform: translateY(20px); /* Start below its final position */
+    animation: line 0.5s ease forwards;
+}
+#heading1{
+    animation-delay: 0s ;
+}
+#heading2{
+    animation-delay: 0.5s ;
+}
+#heading3{
+    animation-delay: 1s ;
+}
+#heading4{
+    animation-delay: 1.5s ;
+}
+@keyframes line {
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.autoshow{
+    animation: autoshow both;
+    animation-timeline: view(70% 5%);
+}
+@keyframes autoshow{
+    from{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+div>.autoblur{
+    opacity: 1;
+    text-align: center;
+    font-size: 90px;
+    animation: autobluranim linear both;
+    animation-timeline: view();
+}
+@keyframes autobluranim{
+    0%{
+        filter: blur(40px);
+    }
+    35%,65%{
+        filter: blur(0px);
+    }
+    100%{
+        filter: blur(40px);
+    }
+}
+.video-background{
+    position: relative;
+    height: 300px;
+    width: 100vw;
+    overflow: hidden;
+    /* display: grid;
+    grid-template-columns: repeat(2,1fr); */
+}
+.bg-video{
+    position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1; 
+}
+#intro{
+    padding: 90px;
+}
+p{
+    text-align: left;
+    font-size: 20px;
+}
+.char_bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.char_bg img{
+    height:100vh;
+    width: 100VW;
+    /* filter: brightness(50%); */
+    z-index: -1;
+}
+
+.battle{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding-top: 100px;
+}
+.card {
+    border-radius: 8px;
+    width: 440px;
+    margin: 20px auto;
+    overflow: hidden; /* Ensures content doesn't overflow */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+}
+.card:hover{
+    scale: 1.05;
+}
+/* Image container */
+.card-images {
+    display: flex;
+    width: 100%;
+    z-index: 2;
+}
+
+.card-images img {
+    width: 50%; /* Each image takes 50% of the card width */
+    height: 275px; /* Maintain aspect ratio */
+    margin: 5px;
+    border-radius: 10px;
+}
+/* Card text */
+.card-text {
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: whitesmoke;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+h3{
+    display: inline;
+    text-align: center;
+}
