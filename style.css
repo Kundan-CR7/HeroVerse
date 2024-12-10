@@ -93,29 +93,30 @@ body {
     left: calc(50% - 100px);
     transform-style: preserve-3d;
     transform: perspective(1000px);
-    animation: autoRun 20s linear infinite;
+    animation: X 20s linear infinite;
     /* z-index: 2; */
 }
-
-@keyframes autoRun {
-    from {
-        transform: perspective(1000px) rotateX(-4deg) rotateY(0deg);
+@keyframes X{
+    0%{
+        transform: rotateX(25deg) rotateY(0deg) ;
     }
-
-    to {
-        transform: perspective(1000px) rotateX(-4deg) rotateY(360deg);
+    50%{
+        transform: rotateX(-25deg) rotateY(180deg);
+    }
+    100%{
+        transform: rotateX(25deg) rotateY(360deg);
     }
 }
 
 .banner .slider .item {
     position: absolute;
     inset: 0 0 0 0;
-    transform:
-        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
+    box-shadow: 5px 5px 10px gray, -5px -5px 15px lightblue;
+    transform: rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
 }
 
 .banner .slider .item img {
-    border-radius: 5px;
+    border-radius: 8px;
     width: 100%;
     height: 100%;
     object-fit: cover;
