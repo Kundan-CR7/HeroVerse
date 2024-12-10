@@ -5,8 +5,15 @@
 *::after {
     margin: 0;
     padding: 0;
+    font-family: herofont;
     /* box-sizing: border-box; */
 }
+
+@font-face {
+    font-family: herofont;
+    src: url(Drcharmed-8Y1Z.ttf);
+}
+
 
 li {
     list-style: none;
@@ -170,7 +177,6 @@ a {
 }
 
 /* Header section */
-
 
 
 /* carousel */

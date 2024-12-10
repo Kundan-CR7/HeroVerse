@@ -1,222 +1,310 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>battle_1</title>
     <link rel="stylesheet" href="battle1.css">
+    <link rel="stylesheet" href="Battle_1.css">
+
 </head>
+
+<style>
+    .bio[for="box1"] {
+        background-image: url(battle_images/ironman_flight.png);
+    }
+
+    .bio[for="box2"] {
+        background-image: url(battle_images/ironman_ai.png);
+    }
+
+    .bio[for="box3"] {
+        background-image: url(battle_images/armor.png);
+    }
+
+    .bio[for="box4"] {
+        background-image: url(battle_images/ironman_strength.png);
+    }
+
+    .bio[for="box5"] {
+        background-image: url(battle_images/batman_bane_fight.jpg);
+    }
+
+    .bio[for="box6"] {
+        background-image: url(battle_images/batman3.jpeg);
+    }
+
+    .bio[for="box7"] {
+        background-image: url(battle_images/batman-returns-main.avif);
+    }
+
+    .bio[for="box8"] {
+        background-image: url(battle_images/batman_car.jpg);
+    }
+</style>
+
 <body>
     <header class="main-header">
         <nav class="desktop-main-menu">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="character.html">Characters</a></li>
-            <li><a href="movies.html">Movies</a></li>
-            <li><a href="comic.html">Comics</a></li>
-          </ul>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="character.html">Characters</a></li>
+                <li><a href="movies.html">Movies</a></li>
+                <li><a href="comic.html">Comics</a></li>
+            </ul>
         </nav>
-      </header>
-    <section>
-<!-- Character No 1 -->
-        <div class="hero"><img src="media/IRON MAAN.jpg">           
-
-        </div>
-        <div class="container">
-            <div class="card">
-                <div class="percent" style="--clr:#04fc43; --num:70">
-                    <div class="dot"></div>
-                    <svg>
-                        <circle cx="70" cy="70" r="70"></circle>
-                        <circle cx="70" cy="70" r="70"></circle>
-                    </svg>
-                    <div class="number"><p>7</p></div>
-                </div>
-                <div><p class="power">Durability<p></div>
-            </div>
-            <div class="card">
-                <div class="percent" style="--clr:#04fc43; --num:75;">
-                    <div class="dot"></div>
-                    <svg>
-                        <circle cx="70" cy="70" r="70"></circle>
-                        <circle cx="70" cy="70" r="70"></circle>
-                    </svg>
-                    <div class="number"><p>7.5</p></div>
-                </div>
-                <div><p class="power">Speed<p></div>
-            </div>
-            <div class="card">
-                <div class="percent" style="--clr:#04fc43; --num:90">
-                    <div class="dot"></div>
-                    <svg>
-                        <circle cx="70" cy="70" r="70"></circle>
-                        <circle cx="70" cy="70" r="70"></circle>
-                    </svg>
-                    <div class="number"><p>9</p></div>
-                </div>
-                <div><p class="power">Intelligence<p></div>
-            </div>
-            <div class="card">
-                <div class="percent" style="--clr:#04fc43; --num:80">
-                    <div class="dot"></div>
-                    <svg>
-                        <circle cx="70" cy="70" r="70"></circle>
-                        <circle cx="70" cy="70" r="70"></circle>
-                    </svg>
-                    <div class="number"><p>8</p></div>
-                </div>
-                <div><p class="power">Strength<p></div>
-            </div>
+    </header>
+    <main>
+        <!-- Character No 1 -->
+        <div class="title">
+            <h1><span style="color: red;">IRON MAN</span> vs <span style="color: blue;">BATMAN</span></h1>
         </div>
 
-        <div class="powers">
-            <div class="card-box">
-                <input type="radio" name="slide" id="box1" checked>
-                <label for="box1" class="bio">
-                    <div class="row">
-                        <div class="icon">1</div>
-                        <div class="description">
-                            <h1>Flight</h1>
-                            <p>Iron Man's suit enables Tony Stark to fly, with upgrades increasing the speed capabilities.</p>
+        <div class="super">
+            <div class="container">
+                <div class="hero MARVEL"><img src="battle_images/iron-main.jpg">
+                    <!-- <div class="gradient-top"></div> -->
+                    <!-- <div class="gradient-bottom"></div> -->
+                    <!-- <div class="previous">
+                    <a href="character.html">Back</a>
+                </div> -->
+                </div>
+                <div class="card">
+                    <div class="percent" style="--clr:#04fc43; --num:70">
+                        <div class="dot">
+                        </div>
+                        <svg>
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>7</p>
                         </div>
                     </div>
-                </label>
-                <input type="radio" name="slide" id="box2" >
-                <label for="box2" class="bio">
-                    <div class="row">
-                        <div class="icon">2</div>
-                        <div class="description">
-                            <h1>Artificial Intelligence</h1>
-                            <p>An onboard AI system - originally JARVIS, then replaced by FRIDAY - helps Tony control his armor and connect to other systems.</p>
+                    <div>
+                        <p class="power">Durability</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="percent" style="--clr:#04fc43; --num:75;">
+                        <div class="dot"></div>
+                        <svg>
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>7.5</p>
                         </div>
                     </div>
-                </label>
-                <input type="radio" name="slide" id="box3" >
-                <label for="box3" class="bio">
-                    <div class="row">
-                        <div class="icon">3</div>
-                        <div class="description">
-                            <h1>Armored Suit</h1>
-                            <p>Tony has found increasingly advanced ways to quickly don the armor, from the capability to summon it to him, to nanotech that allows the armor to grow from within a storage unit on his chest.</p>
+                    <div>
+                        <p class="power">Speed
+                        <p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="percent" style="--clr:#04fc43; --num:90">
+                        <div class="dot"></div>
+                        <svg>
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>9</p>
                         </div>
                     </div>
-                </label>
-                <input type="radio" name="slide" id="box4" >
-                <label for="box4" class="bio">
-                    <div class="row">
-                        <div class="icon">4</div>
-                        <div class="description">
-                            <h1>Strength and Durability</h1>
-                            <p>One of many specialized suits, the Hulkbuster armor is a highly durable, incredibly strong suit that allows Stark to go toe to toe with the teammate for which it is named.</p>
+                    <div>
+                        <p class="power">Intelligence
+                        <p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="percent" style="--clr:#04fc43; --num:80">
+                        <div class="dot"></div>
+                        <svg>
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>8</p>
                         </div>
                     </div>
-                </label>
+                    <div>
+                        <p class="power">Strength
+                        <p>
+                    </div>
+                </div>
+                <div class="powerr">
+                    <div class="card-box">
+                        <input type="radio" name="slide" id="box1" checked>
+                        <label for="box1" class="bio">
+                            <div class="row">
+                                <div class="icon">1</div>
+                                <div class="description">
+                                    <h3>Flight</h3>
+
+                                </div>
+                            </div>
+                        </label>
+                        <input type="radio" name="slide" id="box2" >
+                        <label for="box2" class="bio">
+                            <div class="row">
+                                <div class="icon">2</div>
+                                <div class="description">
+                                    <h3>Artificial Intelligence</h3>
+
+                                </div>
+                            </div>
+                        </label>
+                        <input type="radio" name="slide" id="box3" >
+                        <label for="box3" class="bio">
+                            <div class="row">
+                                <div class="icon">3</div>
+                                <div class="description">
+                                    <h3>Armored Suit</h3>
+
+                                </div>
+                            </div>
+                        </label>
+                        <input type="radio" name="slide" id="box4" >
+                        <label for="box4" class="bio">
+                            <div class="row">
+                                <div class="icon">4</div>
+                                <div class="description MAR">
+                                    <h3>Strength and Durability</h3>
+
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
 
 
-<!-- Character No 2 -->
-    <section>
-        <div class="hero2" style="margin-top: 30%;"><img src="media/batman3.jpeg">
-            <div class="gradient-top"></div>
-            <div class="gradient-bottom"></div>
-            <!-- <div class="gradient-bottom"></div> -->
-            <!-- <div class="previous">
-                <a href="character.html">Back</a>
-            </div> -->
-        </div>
-        <div class="container">
-            <div class="card">
-                <div class="percent" style="--clr:#04fc43; --num:85">
-                    <div class="dot"></div>
-                    <svg>
-                        <circle cx="70" cy="70" r="70"></circle>
-                        <circle cx="70" cy="70" r="70"></circle>
-                    </svg>
-                    <div class="number"><p>8.5</p></div>
-                </div>
-                <div><p class="power">Durability<p></div>
-            </div>
-            <div class="card">
-                <div class="percent" style="--clr:#04fc43; --num:80;">
-                    <div class="dot"></div>
-                    <svg>
-                        <circle cx="70" cy="70" r="70"></circle>
-                        <circle cx="70" cy="70" r="70"></circle>
-                    </svg>
-                    <div class="number"><p>8</p></div>
-                </div>
-                <div><p class="power">Speed<p></div>
-            </div>
-            <div class="card">
-                <div class="percent" style="--clr:#04fc43; --num:70">
-                    <div class="dot"></div>
-                    <svg>
-                        <circle cx="70" cy="70" r="70"></circle>
-                        <circle cx="70" cy="70" r="70"></circle>
-                    </svg>
-                    <div class="number"><p>7</p></div>
-                </div>
-                <div><p class="power">Intelligence<p></div>
-            </div>
-            <div class="card">
-                <div class="percent" style="--clr:#04fc43; --num:80">
-                    <div class="dot"></div>
-                    <svg>
-                        <circle cx="70" cy="70" r="70"></circle>
-                        <circle cx="70" cy="70" r="70"></circle>
-                    </svg>
-                    <div class="number"><p>8</p></div>
-                </div>
-                <div><p class="power">Strength<p></div>
-            </div>
-        </div>
+            <!-- Character No 2 -->
 
-        <div class="powers">
-            <div class="card-box">
-                <input type="radio" name="slide" id="box5" checked>
-                <label for="box5" class="bio">
-                    <div class="row">
-                        <div class="icon">1</div>
-                        <div class="description">
-                            <h1>Fighting skills</h1>
-                            <p>He's an experienced fighter. Batman is a formidable opponent because of his extensive arsenal of martial arts skills.</p>
+            <div class="container">
+                <div class="hero DC"><img src="battle_images/batman-main.jpg">
+                    <div class="gradient-top"></div>
+                    <div class="gradient-bottom"></div>
+                    <!-- <div class="gradient-bottom"></div> -->
+                    <!-- <div class="previous">
+                    <a href="character.html">Back</a>
+                </div> -->
+                </div>
+                <div class="card">
+                    <div class="percent" style="--clr:#04fc43; --num:85">
+                        <div class="dot"></div>
+                        <svg>
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>8.5</p>
                         </div>
                     </div>
-                </label>
-                <input type="radio" name="slide" id="box6" >
-                <label for="box6" class="bio">
-                    <div class="row">
-                        <div class="icon">2</div>
-                        <div class="description">
-                            <h1>Weapon mastery</h1>
-                            <p>He has developed a skilled mastery of nearly every weapon in the world and is able to effectively use them in his combat skills.</p>
+                    <div>
+                        <p class="power">Durability
+                        <p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="percent" style="--clr:#04fc43; --num:80;">
+                        <div class="dot"></div>
+                        <svg>
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>8</p>
                         </div>
                     </div>
-                </label>
-                <input type="radio" name="slide" id="box7" >
-                <label for="box7" class="bio">
-                    <div class="row">
-                        <div class="icon">3</div>
-                        <div class="description">
-                            <h1>Professional detective</h1>
-                            <p>He's also one of the most intelligent people in the DC universe, a genius inventor, and the worlds greatest detective.</p>
+                    <div>
+                        <p class="power">Speed
+                        <p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="percent" style="--clr:#04fc43; --num:70">
+                        <div class="dot"></div>
+                        <svg>
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>7</p>
                         </div>
                     </div>
-                </label>
-                <input type="radio" name="slide" id="box8" >
-                <label for="box8" class="bio">
-                    <div class="row">
-                        <div class="icon">4</div>
-                        <div class="description">
-                            <h1>Strength and Durability</h1>
-                            <p>Batman has the strength and stamina to fight off even the most formidable foes. It's not about being able to pick up automobiles</p>
+                    <div>
+                        <p class="power">Intelligence
+                        <p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="percent" style="--clr:#04fc43; --num:80">
+                        <div class="dot"></div>
+                        <svg>
+                            <circle cx="70" cy="70" r="70"></circle>
+                            <circle cx="70" cy="70" r="70"></circle>
+                        </svg>
+                        <div class="number">
+                            <p>8</p>
                         </div>
                     </div>
-                </label>
+                    <div>
+                        <p class="power">Strength
+                        <p>
+                    </div>
+                </div>
+                <div class="powerr">
+                    <div class="card-box">
+                        <input type="radio" name="slide" id="box5" checked>
+                        <label for="box5" class="bio">
+                            <div class="row">
+                                <div class="icon">1</div>
+                                <div class="description">
+                                    <h3>Fighting skills</h3>
+
+                                </div>
+                            </div>
+                        </label>
+                        <input type="radio" name="slide" id="box6" >
+                        <label for="box6" class="bio">
+                            <div class="row">
+                                <div class="icon">2</div>
+                                <div class="description">
+                                    <h3>Weapon mastery</h3>
+
+                                </div>
+                            </div>
+                        </label>
+                        <input type="radio" name="slide" id="box7" >
+                        <label for="box7" class="bio">
+                            <div class="row">
+                                <div class="icon">3</div>
+                                <div class="description">
+                                    <h3>Professional detective</h3>
+                                    <br>
+
+                                </div>
+                            </div>
+                        </label>
+                        <input type="radio" name="slide" id="box8" >
+                        <label for="box8" class="bio">
+                            <div class="row">
+                                <div class="icon">4</div>
+                                <div class="description DC">
+                                    <h3>Strength and Durability</h3>
+                                    <br>
+
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
+    </main>
 </body>
+
 </html>

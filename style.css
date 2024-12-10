@@ -3,7 +3,13 @@
 *::after {
     margin: 0;
     padding: 0;
+    font-family: herofont;
     /* box-sizing: border-box; */
+}
+
+@font-face {
+    font-family: herofont;
+    src: url(Drcharmed-8Y1Z.ttf);
 }
 
 li {
@@ -120,7 +126,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     /* max-width: 560px; */
-    color: rgb(29, 199, 199);
+    color: rgb(255, 255, 255);
     text-align: center;
 }
 .section-inner h4{
@@ -291,9 +297,6 @@ p {
     background-color: transparent;
 }
 
-.card:hover {
-    scale: 1.05;
-}
 
 /* Image container */
 .card-images {
@@ -324,4 +327,33 @@ p {
 h3 {
     display: inline;
     text-align: center;
+}
+
+.card:hover {
+    animation: scale;
+    animation-duration: 0.1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    box-shadow: 1px 1px 10px red;
+}
+@keyframes scale{
+    0%{
+        scale: 1;
+    }
+    20%{
+        scale: 1.01;
+    }
+    40%{
+        scale: 1.02;
+    }
+    60%{
+        scale: 1.03;
+    }
+    80%{
+        scale: 1.04;
+    }
+    100%{
+        scale: 1.05;
+    }
 }

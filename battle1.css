@@ -1,24 +1,41 @@
-*,
-*::before,
-*::after {
+*{
     margin: 0;
     padding: 0;
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
 }
-
-li {
-    list-style: none;
+body{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    overflow-x: hidden;
+    background-color:  #000000;
 }
-
-body {
+.title{
+    width: auto;
+    height: auto;
+    /* background-color: red; */
+    color: white;
+    /* text-align: center; */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow-x: hidden;
-    background-color: #000000;
+    font-style: italic;
+    font-weight: 900;
+    margin-top: 100px;
+    margin-bottom: 0;
 }
-
+.hero{
+    width: 65%; 
+    height: 500px;
+}
+.hero img{
+    border-radius: 5px;
+    height: 100%;
+    display: block;
+    width: 100%; 
+    opacity: 0; 
+    animation: fadeEffect 3s ease-in-out forwards;
+}
 .main-header {
     position: fixed;
     top: 0;
@@ -67,122 +84,7 @@ body {
     transform-origin: left;
     transition-duration: 0.4s;
 }
-
-.banner {
-    box-sizing: border-box;
-    padding-bottom: 20px;
-    /* margin-top: 6%; */
-    width: 100%;
-    height: 80vh;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: red; */
-    
-}
-
-.banner .slider {
-    position: absolute;
-    width: 200px;
-    height: 250px;
-    left: calc(50% - 100px);
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-    animation: autoRun 20s linear infinite;
-    /* z-index: 2; */
-}
-
-@keyframes autoRun {
-    from {
-        transform: perspective(1000px) rotateX(-4deg) rotateY(0deg);
-    }
-
-    to {
-        transform: perspective(1000px) rotateX(-4deg) rotateY(360deg);
-    }
-}
-
-.banner .slider .item {
-    position: absolute;
-    inset: 0 0 0 0;
-    transform:
-        rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)) translateZ(550px);
-}
-
-.banner .slider .item img {
-    border-radius: 5px;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.section-inner{
-    position: absolute;
-    bottom: 60px;
-    left: 50%;
-    transform: translateX(-50%);
-    /* max-width: 560px; */
-    color: rgb(29, 199, 199);
-    text-align: center;
-}
-.section-inner h4{
-    font-size: 22px;
-    margin-bottom: 5px;
-    font-weight: 700;
-    animation-fill-mode: both;
-    animation: fadeInUp 0.5s ease-in-out;
-    text-align: center;
-    text-decoration: underline;
-    
-}
-.section-inner h2{
-    font-size: 50px;
-    font-weight: 900;
-    margin-bottom: 20px;
-    animation: fadeInUp 0.5s ease-in-out 0.2s;
-    animation-fill-mode: both;
-    text-align: center;
-}
-
-.bd {
-    border-radius: 10px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-}
-.bd::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('backd.jpg') no-repeat center center/cover;
-    filter: blur(4px); 
-    z-index: -1; 
-}
-a {
-    color: white;
-    font-size: 25px;
-    text-decoration: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-
-.hero{
-    width: 100%; 
-    height: auto;
-}
-.hero img{
-    display: block;
-    width: 100%; 
-    height: auto;
-
-}
-/* .previous{
+.previous{
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -192,30 +94,47 @@ a {
     top: 0;
     width: 100%;
     z-index: 10;
-} */
-
-/* .gradient-top,.gradient-bottom{
+}
+a{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+}
+.gradient-top,.gradient-bottom{
     position: absolute;
     left: 0;
     width: 100%;
-    height: 25%; 
+    height: 20%; 
     z-index: 2;
 }
 .gradient-top{
     top: 0;
     background: linear-gradient(to bottom,  rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-} */
+}
 /* .gradient-bottom{
     bottom: 0;
     background: linear-gradient(to top,  rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 } */
-
+.super{
+    width: auto;
+    height: 100vh;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* gap: 50px; */
+    margin-top: 0px;
+}
 .container{
+    margin-top: 5%;
+    width: 50%;
     display: flex;
     justify-content: center ;
     align-items: center;
     gap: 25px;
     padding: 25px;
+    flex-wrap: wrap;
+    /* border: 0.5px dotted aqua; */
 }
 .container .card{
     padding-left: 50px;
@@ -254,7 +173,7 @@ a {
 }
 @keyframes progress-animation {
   0% {
-    stroke-dashoffset: 440;
+    stroke-dashoffset: 0;
   }
   100% {
     stroke-dashoffset: calc(440 - (440 * var(--num)) / 100);
@@ -265,7 +184,6 @@ a {
     position: absolute;
     inset: 1px;
     z-index: 10;
-    transform: rotate(calc(3.6deg * var(--num)));
     animation: dotanimate 1s linear forwards;
     /* 360deg/100 = 3.6 */
 }
@@ -304,36 +222,37 @@ a {
     padding: 10px;
     padding-left: 15%;
 }
-.hero2{
-    width: 100VW;
-    height: auto;
-}
-.hero2 img{
-    display: block;
-    width: 100%; 
-    height: auto;
-
-}
-
-
-
-  .powers{
+@keyframes fadeEffect {
+    0% {
+      opacity: 0; 
+    }
+    100% {
+      opacity: 1; 
+    }
+  }
+  .powerr{
     font-family: Arial, Helvetica, sans-serif;
-    width: 100vw;
-    height: 50vh;
-    position: absolute;
+    width: 90%;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .card-box{
-    height: 400px;
+    margin-left: 30px;
+    width: 80%;
+    height: 80%;
+    /* border: 3px solid yellow; */
+
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-start;
   }
   .bio{
     width: 80px;
+    /* object-fit: contain; */
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     cursor: pointer;
     overflow: hidden;
@@ -343,12 +262,13 @@ a {
     align-items: flex-end;
     transition: 0.6s cubic-bezier(0.28, -0.03, 0, 0.99);
     box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+
   }
   
   .bio>.row{
     color: white;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
   
   .bio>.row>.icon{
@@ -364,20 +284,19 @@ a {
   .bio>.row>.description{
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    overflow: hidden;
+    flex-wrap: wrap;
     height: 80px;
     width: 520px;
-    opacity: 0;
     transform: translateY(30px);
     transition-delay: 0.3s;
     transition: all 0.3s ease;
   }
   .description p{
-    color: #b0b0ba;
+    color: black;
     padding-top: 5px;
+
   }
-  .description h1{
+  .description h3{
     text-transform: uppercase;
   }
   input{
@@ -390,27 +309,4 @@ a {
     opacity: 1 !important;
     transform: translateY(0) !important;
   }
-  .bio[for="box1"]{
-    background-image: url(battle_images/ironman_flight.png);
-  }
-  .bio[for="box2"]{
-    background-image: url(battle_images/ironman_ai.png);
-  }
-  .bio[for="box3"]{
-    background-image: url(battle_images/armor.png);
-  }
-  .bio[for="box4"]{
-    background-image: url(battle_images/ironman_strength.png);
-  }
-  .bio[for="box5"]{
-    background-image: url(battle_images/batman_bane_fight.jpg);
-  }
-  .bio[for="box6"]{
-    background-image: url(battle_images/batman3.jpeg);
-  }
-  .bio[for="box7"]{
-    background-image: url(battle_images/batman-returns-main.avif);
-  }
-  .bio[for="box8"]{
-    background-image: url(battle_images/batman_car.jpg);
-  }
+
